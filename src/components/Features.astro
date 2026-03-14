@@ -1,0 +1,43 @@
+---
+const features = [
+  {
+    title: "Мгновенная загрузка",
+    description: "Astro гарантирует минимальный объем JavaScript, обеспечивая скорость, которую не могут предложить конкуренты.",
+    icon: "⚡"
+  },
+  {
+    title: "Идеально для Mobile",
+    description: "Весь трафик из Instagram идет с мобильных. Наши сайты безупречно работают на любых смартфонах.",
+    icon: "📱"
+  },
+  {
+    title: "SEO-оптимизация",
+    description: "Чистый статический код и быстрая загрузка автоматически поднимают ваш бизнес в топ Google и Яндекс.",
+    icon: "🎯"
+  },
+  {
+    title: "Конверсия в продажи",
+    description: "Современный UX и продуманные призывы к действию превращают подписчиков в реальных покупателей.",
+    icon: "💰"
+  }
+];
+---
+
+<section class="py-24 px-4 relative">
+  <div class="container mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-black mb-4">Почему ваш бизнес <span class="text-neon-purple">нуждается в сайте?</span></h2>
+      <p class="text-white/60 max-w-2xl mx-auto">Инстаграм — это витрина, а сайт — это ваш полноценный офис, который работает на вас 24/7 и не зависит от алгоритмов соцсетей.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {features.map(feature => (
+        <div class="glass p-8 rounded-3xl hover:border-neon-purple/50 transition-all duration-500 group">
+          <div class="text-4xl mb-6 transform group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
+          <h3 class="text-2xl font-bold mb-4 group-hover:text-neon-purple transition-colors">{feature.title}</h3>
+          <p class="text-white/60 leading-relaxed text-sm">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

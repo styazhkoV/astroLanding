@@ -1,0 +1,45 @@
+---
+const steps = [
+  {
+    title: "Обсуждение",
+    description: "Анализируем ваш текущий профиль в Instagram, определяем сильные стороны и цели вашего нового сайта.",
+    number: "01"
+  },
+  {
+    title: "Разработка",
+    description: "Проектируем футуристичный дизайн и внедряем его на базе Astro для максимальной производительности.",
+    number: "02"
+  },
+  {
+    title: "Запуск",
+    description: "Проводим финальное тестирование скорости и SEO, после чего ваш сайт становится доступен всему миру.",
+    number: "03"
+  },
+  {
+    title: "Рост",
+    description: "Ваш сайт начинает приносить лиды, пока вы фокусируетесь на контенте и качестве вашего продукта.",
+    number: "04"
+  }
+];
+---
+
+<section class="py-24 px-4 bg-dark-bg">
+  <div class="container mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-black mb-4">Как это <span class="text-neon-green">работает?</span></h2>
+      <p class="text-white/60">Всего 4 шага от идеи до полноценного присутствия вашего бизнеса в сети.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {steps.map(step => (
+        <div class="relative p-8 rounded-3xl border border-white/5 hover:border-neon-green/30 transition-all duration-300">
+          <div class="text-6xl font-black text-white/5 absolute top-4 right-8 select-none">{step.number}</div>
+          <div class="relative z-10">
+            <h3 class="text-2xl font-bold mb-4 text-white">{step.title}</h3>
+            <p class="text-white/50 leading-relaxed">{step.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

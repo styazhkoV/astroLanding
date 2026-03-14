@@ -1,0 +1,35 @@
+---
+const WHATSAPP_LINK = "https://wa.me/77055606066";
+---
+
+<section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden px-4 py-20">
+  <!-- Backdrop Gradients -->
+  <div class="absolute inset-0 z-0">
+    <div class="absolute top-1/4 -left-1/4 w-96 h-96 bg-neon-cyan/20 blur-[120px] rounded-full"></div>
+    <div class="absolute bottom-1/4 -right-1/4 w-96 h-96 bg-neon-purple/20 blur-[120px] rounded-full"></div>
+  </div>
+
+  <div class="container mx-auto relative z-10 text-center animate-fade-in">
+    <h1 class="text-5xl md:text-7xl lg:text-8xl font-black mb-6 bg-gradient-to-r from-white via-white to-white/50 bg-clip-text text-transparent leading-tight">
+      Выведи свой бизнес <br />
+      <span class="text-neon-cyan text-glow-cyan">за пределы Instagram</span>
+    </h1>
+    
+    <p class="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed">
+      Создаем молниеносные сайты на <span class="text-white font-semibold">Astro</span>. 
+      Переводим ваших подписчиков в реальных клиентов с помощью передовых технологий и безупречного дизайна.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a 
+        href={WHATSAPP_LINK}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="glass px-8 py-4 rounded-full font-bold text-lg text-neon-cyan border-neon-cyan/30 hover:bg-neon-cyan hover:text-dark-bg hover:border-neon-cyan transition-all duration-300 glow-cyan group"
+      >
+        Заказать сайт (WhatsApp)
+        <span class="inline-block transform group-hover:translate-x-1 transition-transform ml-2">→</span>
+      </a>
+    </div>
+  </div>
+</section>
